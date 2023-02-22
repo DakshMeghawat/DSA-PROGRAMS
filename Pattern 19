@@ -1,1 +1,22 @@
-as
+#include <iostream>
+using namespace std;
+
+void printTriangle(int n) {
+    // Print the pattern
+    for(int i=1; i<=n; i++) {
+        char c = 'A' + n - 1;
+        for(int j=1; j<=i; j++) {
+            cout << c << " ";
+            c--;
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int n;
+    cout << "Enter the value of n: ";
+    cin >> n;
+    printTriangle(n);
+    return 0;
+}
